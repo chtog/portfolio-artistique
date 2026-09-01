@@ -178,9 +178,6 @@ footer .portfolio-link:hover {
 }
 @media (max-width: 600px) {
   header {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
     padding: 16px 20px;
   }
   .logo {
@@ -188,7 +185,7 @@ footer .portfolio-link:hover {
     height: 40px;
   }
   nav {
-    justify-content: center;
+    justify-content: flex-end;
     flex-wrap: wrap;
     gap: 16px;
   }
@@ -203,7 +200,7 @@ footer .portfolio-link:hover {
     text-align: center;
   }
   footer .footer-right {
-    flex-direction: column;
+    flex-direction: row;
     gap: 16px;
   }
   .lightbox-close {
