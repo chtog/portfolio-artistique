@@ -1,0 +1,224 @@
+body {
+  font-family: 'Miranda Sans', sans-serif;
+  margin: 0;
+}
+picture {
+  display: block;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+.logo {
+  width: 50px;
+  height: 60px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  color: #292929;
+}
+.logo:hover {
+  color: #366268;
+}
+.logo svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  fill: currentColor;
+}
+nav {
+  display: flex;
+  gap: 32px;
+}
+nav a {
+  text-decoration: none;
+  color: #292929;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 600;
+  cursor: pointer;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+nav a:hover {
+  color: #366268;
+  border-bottom-color: #366268;
+}
+nav a.active {
+  color: #366268;
+  border-bottom-color: #366268;
+}
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox-overlay.open {
+  display: flex;
+}
+.lightbox-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 85vw;
+}
+.lightbox-overlay img {
+  max-width: 85vw;
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+}
+.lightbox-caption {
+  margin-top: 12px;
+  color: #fff;
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
+}
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 36px;
+  line-height: 1;
+  cursor: pointer;
+}
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 48px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 8px 20px;
+}
+.lightbox-prev {
+  left: 8px;
+}
+.lightbox-next {
+  right: 8px;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #757575;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.about .text p a,
+.project-intro p a {
+  color: #757575;
+  text-decoration: underline;
+}
+.about .text p a:hover,
+.project-intro p a:hover {
+  color: #366268;
+  text-decoration: none;
+}
+footer .footer-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+footer .socials {
+  display: flex;
+  gap: 16px;
+}
+footer .portfolio-link {
+  font-size: 14px;
+  font-weight: 700;
+  color: #292929;
+  text-decoration: none;
+  border-bottom: 1px solid #767676;
+  padding-bottom: 2px;
+}
+footer .socials a {
+  color: #292929;
+  display: flex;
+}
+footer .socials svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+footer .socials a:hover {
+  color: #366268;
+}
+footer .portfolio-link:hover {
+  color: #366268;
+  border-bottom-color: #366268;
+}
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+  }
+  .logo {
+    width: 32px;
+    height: 40px;
+  }
+  nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  nav a {
+    font-size: 14px;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+  footer .footer-right {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .lightbox-close {
+    top: 12px;
+    right: 16px;
+    font-size: 28px;
+  }
+  .lightbox-arrow {
+    font-size: 32px;
+    padding: 6px 10px;
+  }
+  .lightbox-prev {
+    left: 0;
+  }
+  .lightbox-next {
+    right: 0;
+  }
+}
